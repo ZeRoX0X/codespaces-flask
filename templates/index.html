@@ -6,7 +6,7 @@
     <h1>Upload a doc file</h1>
     <p>Select a doc file from your computer and click Upload</p>
     <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="doc_file" accept=".doc,.docx">
+        <input type="file" name="doc_files" accept=".doc,.docx" multiple>
         <input type="submit" value="Upload">
         <select id="model" name="model">
             <option value="Boolean">Boolean Model</option>

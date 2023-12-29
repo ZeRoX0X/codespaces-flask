@@ -1,2 +1,6 @@
 Flask==2.3.2
 python-docx==0.8.11
+textract
+antiword
+pandas == 2.1.4
+nltk == 3.8.1
