@@ -1,19 +1,49 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Upload a doc file</title>
-</head>
+    <title>Search Page</title>
+    <link rel="stylesheet" href="../static/search.css">
+    
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    </head>
 <body>
+
     <h1>Upload a doc file</h1>
     <p>Select a doc file from your computer and click Upload</p>
-    <form action="/upload" method="post" enctype="multipart/form-data">
+    <form  method="post" enctype="multipart/form-data">
         <input type="file" name="doc_files" accept=".doc,.docx" multiple>
         <input type="submit" value="Upload">
+        <select id="lan" name="lan">
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+           
+        </select>
+    </form>
+    <h1>Search Documents</h1>
+    <form id="search-form">
+        <input type="text" id="query" name="query" placeholder="Enter your query">
         <select id="model" name="model">
             <option value="Boolean">Boolean Model</option>
             <option value="Extended Boolean">Extended Boolean Model</option>
             <option value="Vector">Vector Model</option>
         </select>
+  
+        <button type="submit" id="submit">Search</button>
     </form>
 
+    <div id="results">
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th>Document Name</th>
+                    <th>Rank</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+        <div id="document-text"></div> </div>
+
+        <script src="../static/app.js"></script> 
 </body>
 </html>
